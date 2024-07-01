@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Games</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #1a1a1a;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+        }
+        .sidebar {
+            width: 200px;
+            background: #333;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+        }
+        .sidebar a {
+            text-decoration: none;
+            color: #fff;
+            padding: 15px;
+            background: #444;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .sidebar a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 200%;
+            height: 100%;
+            background: orange;
+            transform: skewX(-30deg);
+            transition: left 0.3s ease;
+            z-index: 0;
+        }
+        .sidebar a:hover::before {
+            left: 100%;
+        }
+        .sidebar a:hover {
+            background: #555;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            background: #222;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 90px;
+        }
+        .content .game {
+            background: #444;
+            padding: 10px;
+            text-align: center;
+            border: 2px solid #333;
+            transition: transform 0.3s ease;
+        }
+        .content .game:hover {
+            transform: scale(1.1);
+        }
+        .content img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body class="dark-mode">
+    <div class="header">
+        <div class="logo-section">
+            <img src="./Assets/logo.png" alt="BB Gaming Logo">
+            <h1>BB Plot</h1>
+            <br><br>
+            <p>"I'm not addicted to gaming, I'm committed to it."</p>
+        </div>
+        <div class="navbar">
+            <a href="./home.html" class="parallelogram">Home</a>
+            <a href="./game.html" class="parallelogram">Online Games</a>
+            <a href="./download.html" class="parallelogram">Downloads</a>
+            <a href="./reviews.html" class="parallelogram">Reviews</a>
+            <a href="./video.html" class="parallelogram">Gameplay Video</a>
+            <a href="./about.html" class="parallelogram">About Us</a>
+            <a href="./jarvis/index.html" class="parallelogram">AI</a>
+            <div class="user-menu settings-menu">
+                <button class="parallelogram"><img src="./Assets/user.png" alt=""></button>
+                <div class="user-menu-content">
+                    <a href="./signin.html">Sign In</a>
+                    <a href="./signup.html">Sign Up</a>
+                    <a href="#logout">Logout</a>
+                    <a href="./contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="mode-toggle" onclick="toggleMode()">🌓</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <a href="#pc">PC</a>
+            <a href="#phone">Phone</a>
+            <a href="#tablet">Tablet</a>
+        </div>
+        <div class="content">
+            <div class="game">
+                <img src="https://via.placeholder.com/150" alt="Game 1">
+                <p>Game 1</p>
+            </div>
+            <div class="game">
+                <img src="https://via.placeholder.com/150" alt="Game 2">
+                <p>Game 2</p>
+            </div>
+            <div class="game">
+                <img src="https://via.placeholder.com/150" alt="Game 3">
+                <p>Game 3</p>
+            </div>
+            <div class="game">
+                <img src="https://via.placeholder.com/150" alt="Game 4">
+                <p>Game 4</p>
+            </div>
+            <div class="game">
+                <img src="https://via.placeholder.com/150" alt="Game 5">
+                <p>Game 5</p>
+            </div>
+            <div class="game">
+                <img src="https://via.placeholder.com/150" alt="Game 6">
+                <p>Game 6</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
